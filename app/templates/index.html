@@ -22,7 +22,6 @@
 	<link rel="stylesheet" href="{{ url_for('static',filename='css/es-icon.css') }}" />
 	<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}" />
 
-
 	<!--[if lt IE 9]>
     	<script src="js/html5shiv.js"></script>
     	<script src="js/respond.min.js" ></script>
@@ -470,7 +469,7 @@
         				</script>-->
         				<a class="mlm" href="/archive/course">课程存档</a>
         				<div class="mts">课程内容版权均归
-        					<a href="/">北京萤火之森林科技发展有限公司</a>所有
+        					<a href="/">北京萤火之森林科技发展有限公司</a> 所有
         					<a class="mlm" href="http://www.miibeian.gov.cn/" target="_blank">京ICP备16046985号</a>
         				</div>
         		</div>
@@ -518,7 +517,7 @@
 		</div>
 
 		<!-- 列表内容 -->
-		<div class="bar-popover-content" style="display:none;">
+		<!-- <div class="bar-popover-content" style="display:none;">
 			<div id="bar-qq-content">
 				<div class="row mtm">
 					<div class="col-xs-6 mbm text-overflow">
@@ -566,8 +565,9 @@
 				<p class="mtm"><i class="es-icon es-icon-phone mrm"></i>通过QQ联系我哦:6168060</p>
 				<p class="mtm"><i class="es-icon es-icon-mail mrm"></i>邮箱： <a class="link-light" href="mailto:admin@teacherfeng.com">admin@teacher.com</a></p>
 			</div>
+		-->
 			<div id="bar-weixin-content">
-				<!-- <img width="110" class="img-responsive" src="img/1036491d1c8f989400.jpg?time=1473820612?time=1473821057?time=1473821110?time=1473827947?time=1473827966?time=1481097215" alt=""> -->
+			 <!--img width="110" class="img-responsive" src="img/1036491d1c8f989400.jpg?time=1473820612?time=1473821057?time=1473821110?time=1473827947?time=1473827966?time=1481097215" alt=""> -->
 				<img width="110" class="img-responsive" src="{{url_for('static',filename='img/1036491d1c8f989400.jpg') }}" alt="">
 			</div>
 		</div>
@@ -575,8 +575,8 @@
 	<div id="login-modal" class="modal" data-url="/login/ajax"></div>
 	<div id="modal" class="modal"></div>
 	<div id="attachment-modal" class="modal"></div>
-<!--
-	<script>
+
+	<!-- <script>
 		var app = {};
 		app.debug = false;
   app.version = '7.3.7';
@@ -603,20 +603,25 @@
   app.lessonCopyEnabled = '0';
   app.cloudSdkCdn = '';
   app.mainScript = '/bundles/topxiaweb/js/app.js?7.3.7';
+   app.mainScript = '{{url_for('static',filename='js/app.js')}}';
   app.lang = 'zh_CN';
-</script>
-<script src="js/translator.min.js"></script>
-<script src="js"></script>
-<script type="text/javascript" src="js/sea.js" ></script>
-<script type="text/javascript" src="js/seajs-style.js" ></script>
-<script type="text/javascript" src="js/seajs-text.min.js" ></script>
-<script type="text/javascript" src="js/seajs-global-config.js" ></script>
+</script> -->
+<script src="{{ url_for('static',filename='js/translator.min.js') }}"></script>
+<script src="{{ url_for('static',filename='js/sea.js') }}"></script>
+<script src="{{ url_for('static',filename='js/seajs-style.js') }}"></script>
+<script src="{{ url_for('static',filename='js/seajs-text.min.js') }}"></script>
+<!-- <script src="{{ url_for('static',filename='js/seajs-global-config.js') }}"></script> -->
 
-<script>
+<!-- <script>
 	seajs.use(app.mainScript);
 </script> -->
 
-<script src="{{url_for('static',filename='js/echo.js') }}"></script>
+<script src="{{ url_for('static',filename='js/jquery-3.1.1.js')}}"></script>
+<script src="{{ url_for('static',filename='js/index.js') }}"></script>
+
+
+
+<script src="{{ url_for('static',filename='js/echo.js') }}"></script>
 <script>echo.init()</script>
 </body>
 </html>
