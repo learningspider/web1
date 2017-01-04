@@ -44,6 +44,9 @@ def login():
     #     flash('error')
     # return render_template('main/login.html',form=form)
     return render_template('main/login.html')
+@main.route('/register',methods=['GET','POST'])
+def register():
+    return render_template('main/register.html')
 @main.route('/logout')
 @login_required
 def logout():
